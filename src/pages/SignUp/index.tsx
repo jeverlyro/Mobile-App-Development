@@ -2,11 +2,15 @@ import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import {Header, TextInput} from '../../components/molecule';
 import {Button, Gap} from '../../components/atoms';
+import {Back} from '../../assets/icon';
 
 const SignIn = () => {
   return (
     <View style={styles.container}>
-      <Header text="Sign Up" />
+      <View style={styles.header}>
+        <Back style={styles.arrow} />
+        <Header text="Sign Up" />
+      </View>
       <View style={styles.contentWrapper}>
         <View style={styles.addPhoto}>
           <Text style={styles.photoText}>Add Photo</Text>
@@ -32,12 +36,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingLeft: 24,
+    backgroundColor: '#FFFFFF',
+  },
   contentWrapper: {
     marginTop: 24,
     flex: 1,
     backgroundColor: '#FFFFFF',
     paddingHorizontal: 24,
     paddingTop: 25,
+    flexGrow: 1,
   },
   addPhoto: {
     alignItems: 'center',
@@ -66,6 +77,11 @@ const styles = StyleSheet.create({
     borderColor: '#8D92A3',
     borderStyle: 'dashed',
     position: 'absolute',
+  },
+  arrow: {
+    width: 11,
+    height: 19,
+    marginRight: 10,
   },
 });
 export default SignIn;
