@@ -18,12 +18,12 @@ const SignIn = () => {
         </View>
         <Gap height={32} />
         <TextInput label="Full name" placeholder="Type your full name" />
-        <Gap height={16} />
+        <Gap height={15} />
         <TextInput
           label="Email address"
           placeholder="Type your email address"
         />
-        <Gap height={16} />
+        <Gap height={15} />
         <TextInput label="Password" placeholder="Type your password" />
         <Gap height={24} />
         <Button text="Continue" textColor="#FFFFFF" />
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     backgroundColor: '#F0F0F0',
-    borderRadius: 300,
+    borderRadius: 90 / 2,
     height: 90,
     width: 90,
     position: 'relative',
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   dashed: {
-    borderRadius: 300,
+    borderRadius: 110 / 2,
     height: 110,
     width: 110,
     borderWidth: 1,
